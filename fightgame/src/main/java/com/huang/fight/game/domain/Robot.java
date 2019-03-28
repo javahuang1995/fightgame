@@ -1,5 +1,8 @@
 package com.huang.fight.game.domain;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
 /**
@@ -7,6 +10,7 @@ import java.util.Random;
  * @Date: 2019/3/27 12:12
  * @Description:
  */
+@Component
 public class Robot extends Role
 {
 

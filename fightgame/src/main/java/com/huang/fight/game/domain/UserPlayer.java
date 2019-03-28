@@ -1,11 +1,14 @@
 package com.huang.fight.game.domain;
 
 
+import org.springframework.stereotype.Component;
+
 /**
  * @Auther: 宁哥
  * @Date: 2019/3/27 12:08
  * @Description:
  */
+@Component
 public class UserPlayer extends Role
 {
     private int attackLimit;
