@@ -22,17 +22,26 @@ import java.util.Map;
 @Scope(value = "session")
 public class FightGameController
 {
-    /*默认攻击值*/
+    /**
+     * 默认攻击值
+     */
     private static final Integer DEFAULT_ATTACK = 10;
 
-    /*充值玩家攻击值*/
+    /**
+     * 充值玩家攻击值
+     */
     private static final Integer HIGHER_ATTACK = 50;
 
+    /**
+     * 日志
+     */
+    private static final Logger LOGGER = LoggerFactory.getLogger(FightGameController.class);
+
     private Robot robot = null;
+
     private UserPlayer userPlayer = null;
 
 
-    private static final Logger logger = LoggerFactory.getLogger(FightGameController.class);
 
 
     /**
@@ -68,12 +77,12 @@ public class FightGameController
         {
             if (userPlayer.getBlood() > robot.getBlood())
             {
-                logger.info("gameOver,you win.");
+                LOGGER.info("gameOver,you win.");
                 model.addAttribute("fightResult", "you win.");
             }
             else
             {
-                logger.info("gameOver,you failed.");
+                LOGGER.info("gameOver,you failed.");
                 model.addAttribute("fightResult", "you failed.");
             }
             return "gameOver";
@@ -84,7 +93,7 @@ public class FightGameController
             userPlayer.attack(robot);
             //fight back
             robot.attack(userPlayer);
-            logger.info("kill robot", "user blood:", userPlayer.getBlood(), "robot blood:", robot.getBlood());
+            LOGGER.info("kill robot", "user blood:", userPlayer.getBlood(), "robot blood:", robot.getBlood());
             model.addAttribute("fightResult", displayBloodStatus());
             return "kill";
 
