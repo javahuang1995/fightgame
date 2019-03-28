@@ -1,9 +1,9 @@
 package com.huang.fight.game.domain;
 
 /**
- * @Auther: 宁哥
- * @Date: 2019/3/27 15:21
- * @Description:
+ * @auther: 宁哥
+ * @date: 2019/3/27 15:21
+ * @description: JSON响应数据结构
  */
 public class FightResult
 {

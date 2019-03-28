@@ -2,10 +2,15 @@ package com.huang.fight.game.domain;
 
 import java.util.Random;
 
+/**
+ * @auther: 宁哥
+ * @date: 2019/3/27 12:12
+ * @description: Role角色抽象类
+ */
 public abstract class Role
 {
     /**
-     * DEFAULT_BLOOD
+     * 默认血量
      */
     private static int DEFAULT_BLOOD = 100;
 
@@ -19,8 +24,6 @@ public abstract class Role
      * blood
      */
     private int blood;
-
-
 
 
     public Role()

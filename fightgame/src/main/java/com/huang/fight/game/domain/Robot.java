@@ -1,14 +1,11 @@
 package com.huang.fight.game.domain;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import java.util.Random;
-
 /**
- * @Auther: 宁哥
- * @Date: 2019/3/27 12:12
- * @Description:
+ * @auther: huagngning
+ * @date: 2019/3/27 12:12
+ * @description: 机器人
  */
 @Component
 public class Robot extends Role

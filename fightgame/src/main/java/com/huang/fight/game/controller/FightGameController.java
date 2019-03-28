@@ -22,7 +22,10 @@ import java.util.Map;
 @Scope(value = "session")
 public class FightGameController
 {
+    /*默认攻击值*/
     private static final Integer DEFAULT_ATTACK = 10;
+
+    /*充值玩家攻击值*/
     private static final Integer HIGHER_ATTACK = 50;
 
     private Robot robot = null;
@@ -31,13 +34,10 @@ public class FightGameController
 
     private static final Logger logger = LoggerFactory.getLogger(FightGameController.class);
 
-//    @RequestMapping("/index")
-//    public String hello()
-//    {
-//        return "index";
-//    }
-//
 
+    /**
+     * 开始游戏
+     */
     @RequestMapping(value = "/start/{hardLevel}", method = RequestMethod.GET)
     public String startGame(@PathVariable("hardLevel") String hardLevel)
     {
@@ -51,6 +51,9 @@ public class FightGameController
         return "game";
     }
 
+    /**
+     * 攻击机器人
+     */
     @RequestMapping(value = "/attack", method = RequestMethod.GET)
     public String attackRobot(Model model)
     {
@@ -88,6 +91,9 @@ public class FightGameController
     }
 
 
+    /**
+     * 显示玩家和机器人状态
+     */
     @RequestMapping(value = "/status", method = RequestMethod.GET)
     @ResponseBody
     public FightResult displayBloodStatus()

@@ -4,9 +4,9 @@ package com.huang.fight.game.domain;
 import org.springframework.stereotype.Component;
 
 /**
- * @Auther: 宁哥
- * @Date: 2019/3/27 12:08
- * @Description:
+ * @auther: author
+ * @date: 2019/3/27 12:08
+ * @description: 用户玩家
  */
 @Component
 public class UserPlayer extends Role
