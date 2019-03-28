@@ -57,8 +57,8 @@ public class FightGameController
         {
             userPlayer.setAttackLimit(HIGHER_ATTACK);
         }
-        //to game page
-        return "game";
+        //to start page
+        return "start";
     }
 
     /**
@@ -95,7 +95,7 @@ public class FightGameController
             robot.attack(userPlayer);
             LOGGER.info("kill robot", "user blood:", userPlayer.getBlood(), "robot blood:", robot.getBlood());
             model.addAttribute("fightResult", displayBloodStatus());
-            return "kill";
+            return "attack";
 
         }
 
