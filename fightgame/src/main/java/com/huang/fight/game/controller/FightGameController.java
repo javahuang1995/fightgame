@@ -36,7 +36,8 @@ public class FightGameController
 
 
     /**
-     * 开始游戏
+     * @param hardLevel 难度级别
+     * @return String
      */
     @RequestMapping(value = "/start/{hardLevel}", method = RequestMethod.GET)
     public String startGame(@PathVariable("hardLevel") String hardLevel)
@@ -53,6 +54,7 @@ public class FightGameController
 
     /**
      * 攻击机器人
+     * @return String
      */
     @RequestMapping(value = "/attack", method = RequestMethod.GET)
     public String attackRobot(Model model)
@@ -93,6 +95,7 @@ public class FightGameController
 
     /**
      * 显示玩家和机器人状态
+     * @return FightResult
      */
     @RequestMapping(value = "/status", method = RequestMethod.GET)
     @ResponseBody
