@@ -38,7 +38,7 @@ public class FightGameControllerTest
     public void startGame() throws Exception
     {
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/start/easy")).andReturn();
-        Assert.assertTrue("game".equals(mvcResult.getResponse().getForwardedUrl()));
+        Assert.assertTrue("start".equals(mvcResult.getResponse().getForwardedUrl()));
         Assert.assertTrue(200 == mvcResult.getResponse().getStatus());
     }
 
@@ -46,9 +46,9 @@ public class FightGameControllerTest
     public void attackRobot() throws Exception
     {
         mockMvc.perform(MockMvcRequestBuilders.get("/start/easy"));
-        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/attack")).andReturn();
+        MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/attackRobot")).andReturn();
         Assert.assertTrue(200 == mvcResult.getResponse().getStatus());
-        Assert.assertTrue("kill".equals(mvcResult.getResponse().getForwardedUrl()));
+        Assert.assertTrue("attack".equals(mvcResult.getResponse().getForwardedUrl()));
     }
 
     @Test

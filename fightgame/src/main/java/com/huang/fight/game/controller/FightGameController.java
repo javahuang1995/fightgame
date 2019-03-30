@@ -65,7 +65,7 @@ public class FightGameController
      * 攻击机器人
      * @return String
      */
-    @RequestMapping(value = "/attack", method = RequestMethod.GET)
+    @RequestMapping(value = "/attackRobot", method = RequestMethod.GET)
     public String attackRobot(Model model)
     {
         if (userPlayer == null || robot == null)
